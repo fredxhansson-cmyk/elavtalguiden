@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const ORG_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Elavtalguiden\",\"url\":\"https://elavtalguiden.vercel.app\",\"logo\":\"https://elavtalguiden.vercel.app/favicon.ico\",\"description\":\"Oberoende jämförelsetjänst för svenska konsumenter inom el.\",\"foundingDate\":\"2026\",\"inLanguage\":\"sv-SE\",\"contactPoint\":{\"@type\":\"ContactPoint\",\"contactType\":\"customer support\",\"url\":\"https://elavtalguiden.vercel.app/kontakt\"}}";
-const WEB_PAGE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"Bästa elavtal för sommarstugan 2026\",\"description\":\"Jämför bästa elavtalet för din sommarstuga ✓ Uppdaterad 2026. Spara pengar och välj miljövänligt!\",\"url\":\"https://elavtalguiden.vercel.app\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"inLanguage\":\"sv-SE\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"Elavtalguiden\",\"url\":\"https://elavtalguiden.vercel.app\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Hem\",\"item\":\"https://elavtalguiden.vercel.app\"}]}}";
-const ITEM_LIST_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Bästa elavtalet för sommarstugan 2026 — Jämförelse 2026\",\"description\":\"Hitta det perfekta elavtalet för din sommarstuga snabbt och enkelt.\",\"numberOfItems\":7,\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Vattenfall\",\"url\":\"https://www.vattenfall.se\",\"description\":\"Flexibla avtal för alla behov\",\"feesAndCommissionsSpecification\":\"från 299 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"441\"}}},{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Fortum\",\"url\":\"https://www.fortum.se\",\"description\":\"Förnybar energi till bra pris\",\"feesAndCommissionsSpecification\":\"från 289 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.7\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"737\"}}},{\"@type\":\"ListItem\",\"position\":3,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"E.ON\",\"url\":\"https://www.eon.se\",\"description\":\"Skräddarsydda avtal för sommarstugor\",\"feesAndCommissionsSpecification\":\"från 310 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"372\"}}},{\"@type\":\"ListItem\",\"position\":4,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"GodEl\",\"url\":\"https://www.godel.se\",\"description\":\"100% förnybar energi\",\"feesAndCommissionsSpecification\":\"från 295 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"559\"}}},{\"@type\":\"ListItem\",\"position\":5,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Telge Energi\",\"url\":\"https://www.telgeenergi.se\",\"description\":\"Klimatsmart el för fritidshus\",\"feesAndCommissionsSpecification\":\"från 300 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.4\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"531\"}}},{\"@type\":\"ListItem\",\"position\":6,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Skellefteå Kraft\",\"url\":\"https://www.skekraft.se\",\"description\":\"Prisvärd el från norra Sverige\",\"feesAndCommissionsSpecification\":\"från 280 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.3\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"392\"}}},{\"@type\":\"ListItem\",\"position\":7,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Greenely\",\"url\":\"https://www.greenely.se\",\"description\":\"Smart elavtal med appstyrning\",\"feesAndCommissionsSpecification\":\"från 290 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.2\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"227\"}}}]}";
-const ARTICLE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bästa elavtalet för sommarstugan 2026\",\"description\":\"Hitta det perfekta elavtalet för din sommarstuga snabbt och enkelt.\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"author\":{\"@type\":\"Organization\",\"name\":\"Elavtalguiden\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Elavtalguiden\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://elavtalguiden.vercel.app\"}}";
-const FAQ_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Vilket elavtal är bäst för sommarstugan?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Det beror på din förbrukning och preferenser. Jämför olika leverantörers erbjudanden för att hitta det som passar bäst.\"}}]}";
+const WEB_PAGE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"Bästa elavtal för sommarstuga 2026 | Jämför nu\",\"description\":\"Hitta bästa elavtalet för sommarstugan 2026. ✓ Jämför Vattenfall, E.ON, Fortum m.fl. Uppdaterad 2026\",\"url\":\"https://elavtalguiden.vercel.app\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"inLanguage\":\"sv-SE\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"Elavtalguiden\",\"url\":\"https://elavtalguiden.vercel.app\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Hem\",\"item\":\"https://elavtalguiden.vercel.app\"}]}}";
+const ITEM_LIST_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Bästa elavtalet för sommarstugan 2026 — Jämförelse 2026\",\"description\":\"Upptäck de bästa elavtalen för din sommarstuga i 2026.\",\"numberOfItems\":7,\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Vattenfall\",\"url\":\"https://www.vattenfall.se\",\"description\":\"Stabilt och pålitligt elavtal\",\"feesAndCommissionsSpecification\":\"från 199 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"441\"}}},{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"E.ON\",\"url\":\"https://www.eon.se\",\"description\":\"Anpassade avtal för fritidshus\",\"feesAndCommissionsSpecification\":\"från 189 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.7\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"372\"}}},{\"@type\":\"ListItem\",\"position\":3,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Fortum\",\"url\":\"https://www.fortum.se\",\"description\":\"Flexibla avtal med fast pris\",\"feesAndCommissionsSpecification\":\"från 179 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"737\"}}},{\"@type\":\"ListItem\",\"position\":4,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Göta Energi\",\"url\":\"https://www.gotaenergi.se\",\"description\":\"Prisvärt elavtal för sommarstugor\",\"feesAndCommissionsSpecification\":\"från 169 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"564\"}}},{\"@type\":\"ListItem\",\"position\":5,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Telge Energi\",\"url\":\"https://www.telgeenergi.se\",\"description\":\"100% förnybar energi\",\"feesAndCommissionsSpecification\":\"från 159 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.4\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"531\"}}},{\"@type\":\"ListItem\",\"position\":6,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Skellefteå Kraft\",\"url\":\"https://www.skekraft.se\",\"description\":\"Lokalt producerad el\",\"feesAndCommissionsSpecification\":\"från 149 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.3\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"392\"}}},{\"@type\":\"ListItem\",\"position\":7,\"item\":{\"@type\":\"FinancialProduct\",\"name\":\"Greenely\",\"url\":\"https://www.greenely.se\",\"description\":\"Smart elavtal via app\",\"feesAndCommissionsSpecification\":\"från 139 kr/mån\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.2\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"227\"}}}]}";
+const ARTICLE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bästa elavtalet för sommarstugan 2026\",\"description\":\"Upptäck de bästa elavtalen för din sommarstuga i 2026.\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"author\":{\"@type\":\"Organization\",\"name\":\"Elavtalguiden\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Elavtalguiden\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://elavtalguiden.vercel.app\"}}";
+const FAQ_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Vilket elavtal är bäst för sommarstugan?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Det beror på din användning. För sommarmånader kan rörligt pris vara bra, medan fastpris passar året runt.\"}}]}";
 
 export async function getStaticProps() {
   var now = new Date();
   var year = now.getFullYear();
   var month = now.toLocaleDateString('sv-SE', { month: 'long' });
   var updated = now.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' });
-  var fallback = [{"name":"Vattenfall","url":"https://www.vattenfall.se","description":"Flexibla avtal för alla behov","badge":"Bäst totalt","score":"4.8","price":"från 299 kr/mån","pros":["Stabil leverantör","Miljövänliga alternativ","Kundvänlig support"]},{"name":"Fortum","url":"https://www.fortum.se","description":"Förnybar energi till bra pris","badge":null,"score":"4.7","price":"från 289 kr/mån","pros":["Grön el","Flexibla betalningsalternativ","Bra kundservice"]},{"name":"E.ON","url":"https://www.eon.se","description":"Skräddarsydda avtal för sommarstugor","badge":null,"score":"4.6","price":"från 310 kr/mån","pros":["Erbjuder smarta lösningar","Bra prisgaranti","Lång erfarenhet"]},{"name":"GodEl","url":"https://www.godel.se","description":"100% förnybar energi","badge":null,"score":"4.5","price":"från 295 kr/mån","pros":["Klimatpositiv el","Inga bindningstider","Socialt ansvarstagande"]},{"name":"Telge Energi","url":"https://www.telgeenergi.se","description":"Klimatsmart el för fritidshus","badge":null,"score":"4.4","price":"från 300 kr/mån","pros":["Fokus på miljö","Lokalt producerad el","Engagerad kundservice"]},{"name":"Skellefteå Kraft","url":"https://www.skekraft.se","description":"Prisvärd el från norra Sverige","badge":null,"score":"4.3","price":"från 280 kr/mån","pros":["Lågt pris","Förnybar energi","Bra kundnöjdhet"]},{"name":"Greenely","url":"https://www.greenely.se","description":"Smart elavtal med appstyrning","badge":null,"score":"4.2","price":"från 290 kr/mån","pros":["Innovativ teknik","App för energikontroll","Miljövänligt fokus"]}];
+  var fallback = [{"name":"Vattenfall","url":"https://www.vattenfall.se","description":"Stabilt och pålitligt elavtal","badge":"Bäst totalt","score":"4.8","price":"från 199 kr/mån","pros":["Grön el","Flexibla avtal","Bra kundservice"]},{"name":"E.ON","url":"https://www.eon.se","description":"Anpassade avtal för fritidshus","badge":null,"score":"4.7","price":"från 189 kr/mån","pros":["Klimatsmart el","Enkel avtalsförändring","Prisgaranti"]},{"name":"Fortum","url":"https://www.fortum.se","description":"Flexibla avtal med fast pris","badge":null,"score":"4.6","price":"från 179 kr/mån","pros":["Fast pris","Miljövänligt","Bra kundsupport"]},{"name":"Göta Energi","url":"https://www.gotaenergi.se","description":"Prisvärt elavtal för sommarstugor","badge":null,"score":"4.5","price":"från 169 kr/mån","pros":["Lågt pris","Enkel administration","Grön el"]},{"name":"Telge Energi","url":"https://www.telgeenergi.se","description":"100% förnybar energi","badge":null,"score":"4.4","price":"från 159 kr/mån","pros":["Förnybar el","Bra miljöval","Engagerad kundtjänst"]},{"name":"Skellefteå Kraft","url":"https://www.skekraft.se","description":"Lokalt producerad el","badge":null,"score":"4.3","price":"från 149 kr/mån","pros":["Lokal elproduktion","Kundvänliga avtal","Hållbarhet"]},{"name":"Greenely","url":"https://www.greenely.se","description":"Smart elavtal via app","badge":null,"score":"4.2","price":"från 139 kr/mån","pros":["App-baserad","Ingen bindningstid","Grön el"]}];
   var items = fallback.slice();
 
   try {
@@ -72,16 +72,16 @@ export default function Home({ providers, year, month, updated }) {
 
   const TRACK_BASE = 'https://axiom-engine-production-54c3.up.railway.app/r';
   const SITE_SLUG = 'elavtalguiden';
-  const AffBtn = ({ url, name, primary }) => {
+  const AffBtn = ({ url, name, primary, network }) => {
     var href = TRACK_BASE && TRACK_BASE.startsWith('http')
-      ? TRACK_BASE + '?p=' + encodeURIComponent(name) + '&url=' + encodeURIComponent(url) + '&site=' + SITE_SLUG
+      ? TRACK_BASE + '?p=' + encodeURIComponent(name) + '&url=' + encodeURIComponent(url) + '&site=' + SITE_SLUG + (network && network !== 'adtraction' ? '&network=' + encodeURIComponent(network) : '')
       : url;
     return (
       <a href={href} target="_blank" rel="noopener noreferrer sponsored"
         style={{ display:'inline-block', background: primary ? pc : '#0f172a', color:'#fff',
           padding:'11px 22px', borderRadius:9, fontWeight:700, fontSize:14,
           textDecoration:'none', whiteSpace:'nowrap', transition:'opacity .15s' }}>
-        Välj {name} →
+        {network === 'amazon' ? 'Köp på Amazon →' : 'Välj ' + name + ' →'}
       </a>
     );
   };
@@ -100,23 +100,23 @@ export default function Home({ providers, year, month, updated }) {
   return (
     <>
       <Head>
-        <title>Bästa elavtal för sommarstugan 2026</title>
-        <meta name="description" content="Jämför bästa elavtalet för din sommarstuga ✓ Uppdaterad 2026. Spara pengar och välj miljövänligt!" />
+        <title>Bästa elavtal för sommarstuga 2026 | Jämför nu</title>
+        <meta name="description" content="Hitta bästa elavtalet för sommarstugan 2026. ✓ Jämför Vattenfall, E.ON, Fortum m.fl. Uppdaterad 2026" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://elavtalguiden.vercel.app" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bästa elavtal för sommarstugan 2026" />
-        <meta property="og:description" content="Jämför bästa elavtalet för din sommarstuga ✓ Uppdaterad 2026. Spara pengar och välj miljövänligt!" />
+        <meta property="og:title" content="Bästa elavtal för sommarstuga 2026 | Jämför nu" />
+        <meta property="og:description" content="Hitta bästa elavtalet för sommarstugan 2026. ✓ Jämför Vattenfall, E.ON, Fortum m.fl. Uppdaterad 2026" />
         <meta property="og:url" content="https://elavtalguiden.vercel.app" />
         <meta property="og:locale" content="sv_SE" />
         <meta property="og:site_name" content="Elavtalguiden" />
-        <meta property="og:image" content="https://elavtalguiden.vercel.app/api/og?title=B%C3%A4sta%20elavtal%20f%C3%B6r%20sommarstugan%202026&niche=el" />
+        <meta property="og:image" content="https://elavtalguiden.vercel.app/api/og?title=B%C3%A4sta%20elavtal%20f%C3%B6r%20sommarstuga%202026%20%7C%20J%C3%A4mf%C3%B6r%20nu&niche=el" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bästa elavtal för sommarstugan 2026" />
-        <meta name="twitter:description" content="Jämför bästa elavtalet för din sommarstuga ✓ Uppdaterad 2026. Spara pengar och välj miljövänligt!" />
-        <meta name="twitter:image" content="https://elavtalguiden.vercel.app/api/og?title=B%C3%A4sta%20elavtal%20f%C3%B6r%20sommarstugan%202026&niche=el" />
+        <meta name="twitter:title" content="Bästa elavtal för sommarstuga 2026 | Jämför nu" />
+        <meta name="twitter:description" content="Hitta bästa elavtalet för sommarstugan 2026. ✓ Jämför Vattenfall, E.ON, Fortum m.fl. Uppdaterad 2026" />
+        <meta name="twitter:image" content="https://elavtalguiden.vercel.app/api/og?title=B%C3%A4sta%20elavtal%20f%C3%B6r%20sommarstuga%202026%20%7C%20J%C3%A4mf%C3%B6r%20nu&niche=el" />
         <link rel="alternate" hreflang="sv" href="https://elavtalguiden.vercel.app" />
         <link rel="alternate" hreflang="x-default" href="https://elavtalguiden.vercel.app" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -166,12 +166,12 @@ export default function Home({ providers, year, month, updated }) {
             </h1>
             <p style={{ fontSize:18, color:'#475569', lineHeight:1.72,
               marginBottom:32, maxWidth:540 }}>
-              Hitta det perfekta elavtalet för din sommarstuga snabbt och enkelt.
+              Upptäck de bästa elavtalen för din sommarstuga i 2026.
             </p>
             <a href="#jamfor" style={{ display:'inline-block', background:pc, color:'#fff',
               padding:'14px 32px', borderRadius:10, fontWeight:700, fontSize:16,
               textDecoration:'none', boxShadow:'0 4px 24px '+pc+'44' }}>
-              Jämför elavtal nu →
+              Hitta bästa avtalet →
             </a>
             <p style={{ marginTop:14, fontSize:13, color:'#94a3b8' }}>
               Gratis &middot; Oberoende &middot; Ingen prenumeration
@@ -185,7 +185,7 @@ export default function Home({ providers, year, month, updated }) {
         padding:'16px 20px', fontFamily:'Inter,sans-serif' }}>
         <div style={{ maxWidth:960, margin:'0 auto', display:'flex',
           gap:32, flexWrap:'wrap', justifyContent:'center', alignItems:'center' }}>
-          <div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#b45309',fontWeight:800,flexShrink:0}}>✓</span><span>Spara pengar</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#b45309',fontWeight:800,flexShrink:0}}>✓</span><span>Miljövänliga val</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#b45309',fontWeight:800,flexShrink:0}}>✓</span><span>Flexibla avtalslängder</span></div>
+          <div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#b45309',fontWeight:800,flexShrink:0}}>✓</span><span>Spara pengar enkelt</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#b45309',fontWeight:800,flexShrink:0}}>✓</span><span>Miljövänliga alternativ</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#b45309',fontWeight:800,flexShrink:0}}>✓</span><span>Flexibla avtalsvillkor</span></div>
         </div>
       </div>
 
@@ -220,6 +220,11 @@ export default function Home({ providers, year, month, updated }) {
                 <div style={{ width:44, height:44, borderRadius:12, background: i===0 ? pcLight : '#f8fafc', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:16, color: i===0 ? pc : '#64748b', flexShrink:0, border:'1px solid '+(i===0 ? pcMed : '#e2e8f0') }}>
                   {['1','2','3','4','5'][i] || (i+1)}
                 </div>
+                {p.image && (
+                  <div style={{ width:72, height:72, flexShrink:0, borderRadius:10, background:'#f8fafc', border:'1px solid #e2e8f0', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+                    <img src={p.image} alt={p.name} style={{ maxWidth:68, maxHeight:68, objectFit:'contain' }} onError={function(e){e.target.style.display='none';}} />
+                  </div>
+                )}
                 <div style={{ flex:1, minWidth:200 }}>
                   <div style={{ fontWeight:800, fontSize:18, color:'#0f172a', marginBottom:3 }}>{p.name}</div>
                   <div style={{ fontSize:13, color:'#64748b', marginBottom:10 }}>{p.description}</div>
@@ -229,7 +234,7 @@ export default function Home({ providers, year, month, updated }) {
                   <div style={{ fontSize:22, fontWeight:800, color:pc }}>{p.currentPrice || p.price}</div>
                   <Stars score={p.score} />
                   <div style={{ background:'#f0fdf4', color:'#15803d', fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:8 }}>{p.badge}</div>
-                  <AffBtn url={p.url} name={p.name} primary={i===0} />
+                  <AffBtn url={p.url} name={p.name} primary={i===0} network={p.network} />
                   <button onClick={() => toggleSelect(p.name)} style={{ padding:'7px 14px', borderRadius:8, fontSize:12, fontWeight:600, cursor: selected.includes(p.name) || selected.length < 3 ? 'pointer' : 'not-allowed', fontFamily:'Inter,sans-serif', border:'1px solid', borderColor: selected.includes(p.name) ? pc : '#e2e8f0', background: selected.includes(p.name) ? pcLight : '#fff', color: selected.includes(p.name) ? pc : '#64748b', opacity: !selected.includes(p.name) && selected.length >= 3 ? 0.4 : 1 }}>
                     {selected.includes(p.name) ? '✓ Vald' : '+ Jämför'}
                   </button>
@@ -339,7 +344,7 @@ export default function Home({ providers, year, month, updated }) {
                       </div>
                     )}
                     <div style={{ marginTop:'auto', paddingTop:10 }}>
-                      <AffBtn url={p.url} name={p.name} primary={true} />
+                      <AffBtn url={p.url} name={p.name} primary={true} network={p.network} />
                     </div>
                   </div>
                 );})}
@@ -364,17 +369,17 @@ export default function Home({ providers, year, month, updated }) {
         fontFamily:'Inter,sans-serif' }}>
         <div style={{ maxWidth:760, margin:'0 auto' }}>
           <h2 style={{ fontSize:28, fontWeight:800, marginBottom:20, color:'#0f172a' }}>
-            Så väljer du rätt
+            Köpa elavtal
           </h2>
           <p style={{ fontSize:16, lineHeight:1.85, color:'#374151', marginBottom:28 }}>
-            När du väljer elavtal för din sommarstuga är det viktigt att överväga hur mycket el du faktiskt kommer att använda. Sommarstugor har ofta en lägre elförbrukning än permanentbostäder, vilket innebär att du kanske inte behöver ett avtal med hög förbrukning. Det är också värt att tänka på om du vill ha ett rörligt eller fast elpris. Ett rörligt pris kan vara mer fördelaktigt under sommarmånaderna då elpriserna generellt är lägre, medan ett fast pris ger säkerhet och förutsägbarhet. Miljövänliga alternativ, såsom grön el från förnybara källor, är också ett övervägande för dem som vill minska sitt koldioxidavtryck. Många leverantörer erbjuder nu avtal där du kan välja att endast använda el från förnybara källor, vilket kan vara ett bra sätt att bidra till en mer hållbar värld. Ta också reda på om leverantören erbjuder några extra tjänster eller rabatter som kan vara till nytta för dig.
+            När du ska köpa ett elavtal för din sommarstuga finns det flera faktorer att tänka på. Först och främst, fundera över hur mycket el du förväntar dig att använda. Om du planerar att använda stugan endast under sommarmånaderna kan ett avtal med rörligt pris vara förmånligt, eftersom elpriserna ofta är lägre under denna period. Å andra sidan, om du besöker stugan året runt, kan ett fastprisavtal ge mer förutsägbarhet i dina kostnader. Vidare bör du överväga miljöpåverkan av ditt val. Många leverantörer erbjuder idag gröna elavtal som garanterar att din el kommer från förnybara källor. Detta kan vara ett viktigt kriterium för dig som värderar hållbarhet. Ta även hänsyn till avtalslängd och eventuella uppsägningskostnader. Vissa avtal kan ha bindningstider som inte passar dina planer, så det är viktigt att läsa det finstilta. Slutligen, jämför olika leverantörers kundrecensioner för att säkerställa att du får en tillförlitlig tjänst.
           </p>
           <h3 style={{ fontSize:22, fontWeight:700, marginBottom:16, color:'#0f172a', marginTop:40 }}>Vanliga misstag</h3>
-          <p style={{ fontSize:16, lineHeight:1.85, color:'#374151', marginBottom:28 }}>Ett vanligt misstag när man väljer elavtal är att inte jämföra tillräckligt många alternativ. Många väljer det första bästa avtalet utan att undersöka andra möjligheter, vilket kan leda till att man betalar mer än nödvändigt. Ett annat misstag är att inte ta hänsyn till den egna förbrukningen och välja ett avtal som inte matchar behovet. Det kan också vara en miss att inte läsa det finstilta i avtalsvillkoren, vilket kan resultera i oväntade avgifter eller förlängningar. Slutligen bör man inte glömma att kontrollera om det finns några dolda miljöpåverkningar eller om leverantören verkligen erbjuder grön el som de påstår.</p>
+          <p style={{ fontSize:16, lineHeight:1.85, color:'#374151', marginBottom:28 }}>Ett vanligt misstag när man väljer elavtal för sommarstugan är att inte ta hänsyn till den faktiska elförbrukningen. Många tecknar avtal baserat på uppskattningar som inte stämmer överens med det verkliga användningsmönstret, vilket kan leda till onödiga kostnader. Ett annat misstag är att ignorera avtalsvillkoren. Många avtal kommer med dolda avgifter eller komplicerade uppsägningsvillkor som kan ställa till problem om du vill byta leverantör senare. Det är också lätt att glömma bort att jämföra avtal regelbundet. Elmarknaden förändras ständigt, och det avtal som var bäst för några år sedan kanske inte är det längre. Slutligen, många missar att kolla om det finns några rabatter eller kampanjer som kan ge en bättre deal.</p>
           <h3 style={{ fontSize:20, fontWeight:700, marginBottom:24, color:'#0f172a' }}>
             Vad ska du tänka på?
           </h3>
-          <div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>1</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Jämför flera leverantörer</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>2</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Kontrollera avtalsvillkor noga</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>3</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Välj rätt prisstruktur</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>4</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Prioritera förnybar energi</p></div>
+          <div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>1</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Jämför elpriser noggrant</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>2</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Välj rätt avtalstyp</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>3</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Kontrollera miljöpåverkan</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#b4530915',color:'#b45309',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>4</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Läs kundrecensioner</p></div>
         </div>
       </section>
 
@@ -383,7 +388,7 @@ export default function Home({ providers, year, month, updated }) {
         <h2 style={{ fontSize:26, fontWeight:800, marginBottom:32, color:'#0f172a' }}>
           Vanliga frågor
         </h2>
-        <details style={{borderBottom:'1px solid #e2e8f0',paddingBottom:16,marginBottom:16}} open={false}><summary style={{fontWeight:700,fontSize:15,cursor:'pointer',color:'#0f172a',listStyle:'none',display:'flex',justifyContent:'space-between',alignItems:'center'}}>Vilket elavtal är bäst för sommarstugan?<span style={{color:'#b45309',fontSize:18,fontWeight:400}}>+</span></summary><p style={{marginTop:12,color:'#475569',lineHeight:1.75,fontSize:14}}>Det beror på din förbrukning och preferenser. Jämför olika leverantörers erbjudanden för att hitta det som passar bäst.</p></details>
+        <details style={{borderBottom:'1px solid #e2e8f0',paddingBottom:16,marginBottom:16}} open={false}><summary style={{fontWeight:700,fontSize:15,cursor:'pointer',color:'#0f172a',listStyle:'none',display:'flex',justifyContent:'space-between',alignItems:'center'}}>Vilket elavtal är bäst för sommarstugan?<span style={{color:'#b45309',fontSize:18,fontWeight:400}}>+</span></summary><p style={{marginTop:12,color:'#475569',lineHeight:1.75,fontSize:14}}>Det beror på din användning. För sommarmånader kan rörligt pris vara bra, medan fastpris passar året runt.</p></details>
       </section>
 
       <section style={{ background:'#f8fafc', borderTop:'1px solid #e2e8f0', padding:'32px 20px', fontFamily:'Inter,sans-serif' }}>
@@ -431,9 +436,9 @@ export default function Home({ providers, year, month, updated }) {
             <div>
               <div style={{ fontWeight:700, color:'#e2e8f0', marginBottom:14, fontSize:12, textTransform:'uppercase', letterSpacing:'0.5px' }}>Jämförelser</div>
               <div style={{ display:'flex', flexDirection:'column', gap:10, fontSize:14 }}>
-                <Link href="/jamfor/vattenfall-vs-fortum" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vattenfall vs Fortum</Link>
                 <Link href="/jamfor/vattenfall-vs-e-on" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vattenfall vs E.ON</Link>
-                <Link href="/jamfor/vattenfall-vs-godel" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vattenfall vs GodEl</Link>
+                <Link href="/jamfor/vattenfall-vs-fortum" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vattenfall vs Fortum</Link>
+                <Link href="/jamfor/vattenfall-vs-gota-energi" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vattenfall vs Göta Energi</Link>
                 <Link href="/jamfor/vattenfall-vs-telge-energi" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vattenfall vs Telge Energi</Link>
                 <Link href="/jamfor/vattenfall-vs-skelleftea-kraft" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vattenfall vs Skellefteå Kraft</Link>
               </div>
